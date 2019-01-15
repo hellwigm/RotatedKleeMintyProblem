@@ -2,15 +2,13 @@ function [f,g] = evaluateRotatedKleeMintyProblem(x,problem)
     global target_flag
     global consumed
     
-    y = problem.R*(x-problem.t);
+    y = x;%problem.R*(x-problem.t);
     f = sum(problem.c.*x); %% y
     g = problem.A*y-problem.b;
     
-    sz = 2*problem.dim;
-    tz = length(g)./sz;
-    gg = reshape(g,sz,tz);
-     
-    if sum(sum(gg<=0,1)==4)==1 
+    sz=2*problem.dim;
+    reshape(g,tz,sz)
+    if sum(g(1:4)<=0)==4 || sum(g(5:8)<=0)==4 
         g=g.*0;
     else
     end      

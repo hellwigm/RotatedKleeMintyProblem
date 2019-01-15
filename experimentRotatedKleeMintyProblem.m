@@ -13,7 +13,7 @@ global consumed
 global best
 
 % Range of problem dimensions [default: 2, 3, 5, 10, 20, 40 , (100)]
-DIMENSION=[2,3,5,10]; %,20,40];
+DIMENSION=[3]; %,3,5,10,20,40];
 
 for j=1:length(DIMENSION)
     
@@ -23,7 +23,7 @@ for j=1:length(DIMENSION)
     input.dim           = DIMENSION(j);
     
     % Creation of the Rotated Klee-Minty Problem in dimension 'input.dim'
-    problem             = createRotatedKleeMintyCubeConstraintSystem(input.dim);
+    problem             = createRotatedKleeMintyCubeConstraintSystem(input.dim,2);
       
     %% USER specifications
   

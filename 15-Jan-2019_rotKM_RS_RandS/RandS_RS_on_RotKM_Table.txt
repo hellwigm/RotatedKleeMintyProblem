@@ -1,0 +1,2 @@
+           Dim	           Fopt	          Fbest	           Fmed	            \nu	      medianErr	             FR	    meanNormErr	         Fevals
+             3	             27	      18.023599	      18.748817	              0	      8.2511827	              1	      36.539373	          60000
